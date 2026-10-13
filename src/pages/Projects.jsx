@@ -2,6 +2,7 @@ import { useState, useMemo } from 'react';
 import PageHeader from '../components/PageHeader';
 import ProjectCard from '../components/ProjectCard';
 import projects from '../data/projects';
+import SkillSwapCard from '../components/SkillSwapCard';
 import { normalizeCategory, getCategories, filterProjects } from '../utils/category';
 
 function Projects() {
@@ -27,6 +28,9 @@ function Projects() {
       />
       <section className="section-padding border-t border-default">
         <div className="container-max">
+          {/* Featured Project: SkillSwap PK */}
+          <SkillSwapCard />
+
           {/* Filter tabs */}
           <div className="flex flex-wrap gap-2 mb-12" role="tablist" aria-label="Project categories">
             {categories.map((c) => {

@@ -2,6 +2,7 @@ import { useState, useMemo } from 'react';
 import { LuArrowUpRight } from 'react-icons/lu';
 import projects from '../data/projects';
 import useReveal from '../hooks/useReveal';
+import SkillSwapCard from '../components/SkillSwapCard';
 import { normalizeCategory, getCategories, filterProjects } from '../utils/category';
 
 function Work() {
@@ -43,6 +44,11 @@ function Work() {
           <p className="text-[var(--text-2)] text-lg max-w-xl leading-relaxed">
             A curated selection of websites, clones, interactive applications, and UI projects I've built to learn, practice, and showcase my skills.
           </p>
+        </div>
+
+        {/* Featured Flagship Project: SkillSwap PK */}
+        <div className="mt-12">
+          <SkillSwapCard />
         </div>
 
         {/* Category filter tabs */}

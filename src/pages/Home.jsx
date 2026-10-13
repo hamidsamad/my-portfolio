@@ -11,6 +11,7 @@ import {
 } from "react-icons/lu";
 
 import Marquee from "../components/Marquee";
+import SkillSwapCard from "../components/SkillSwapCard";
 import projects from "../data/projects";
 import services from "../data/services";
 
@@ -277,6 +278,9 @@ const Home = () => {
               View all projects
             </ArrowLink>
           </div>
+
+          {/* Featured Project: SkillSwap PK */}
+          <SkillSwapCard />
 
           <div className="grid md:grid-cols-2 gap-8">
             {projects.slice(0, 4).map((project, i) => (
