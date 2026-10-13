@@ -1,35 +1,10 @@
-import { useState, useMemo } from 'react';
 import { LuArrowUpRight } from 'react-icons/lu';
 import projects from '../data/projects';
 import useReveal from '../hooks/useReveal';
 import SkillSwapCard from '../components/SkillSwapCard';
-import { normalizeCategory, getCategories, filterProjects } from '../utils/category';
 
 function Work() {
   useReveal();
-
-  // One reliable source of truth for the selected category ('all' by default)
-  const [activeCategory, setActiveCategory] = useState('all');
-
-  // Stable category tabs derived from projects data while preserving 'All' first
-  const categories = useMemo(() => getCategories(projects), []);
-
-  // Filtered projects derived freshly from the original complete projects array
-  const filteredProjects = useMemo(() => {
-    return filterProjects(projects, activeCategory);
-  }, [activeCategory]);
-
-  const handleCategoryClick = (cat) => {
-    if (normalizeCategory(cat) === 'all') {
-      setActiveCategory('all');
-    } else {
-      setActiveCategory(cat);
-    }
-  };
-
-  const isSelected = (cat) => {
-    return normalizeCategory(cat) === normalizeCategory(activeCategory);
-  };
 
   return (
     <section className="section !pt-40">
@@ -51,37 +26,9 @@ function Work() {
           <SkillSwapCard />
         </div>
 
-        {/* Category filter tabs */}
-        <div
-          className="flex flex-wrap gap-2 mt-12 mb-12 reveal-element"
-          role="tablist"
-          aria-label="Filter projects by category"
-        >
-          {categories.map((c) => {
-            const active = isSelected(c);
-            return (
-              <button
-                key={c}
-                type="button"
-                onClick={() => handleCategoryClick(c)}
-                data-cursor
-                role="tab"
-                aria-selected={active}
-                className={`px-5 py-2 rounded-full text-sm font-medium transition-all ${
-                  active
-                    ? 'bg-[var(--accent)] text-white shadow-sm'
-                    : 'border border-[var(--border)] text-[var(--text-2)] hover:border-[var(--accent)] hover:text-[var(--accent)]'
-                }`}
-              >
-                {c}
-              </button>
-            );
-          })}
-        </div>
-
-        {/* Project grid */}
-        <div className="grid md:grid-cols-2 gap-6" aria-live="polite">
-          {filteredProjects.map((p) => (
+        {/* Project grid displaying all projects */}
+        <div className="grid md:grid-cols-2 gap-6 mt-12" aria-live="polite">
+          {projects.map((p) => (
             <a
               key={p.id}
               href={p.link}
@@ -115,13 +62,6 @@ function Work() {
             </a>
           ))}
         </div>
-
-        {/* Fallback empty state */}
-        {filteredProjects.length === 0 && (
-          <div className="py-16 text-center text-[var(--text-2)]">
-            <p className="text-lg">No projects found in this category.</p>
-          </div>
-        )}
       </div>
     </section>
   );
