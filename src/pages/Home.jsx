@@ -139,7 +139,7 @@ const Home = () => {
 
             <div className="hero-actions flex flex-wrap gap-4 mt-10">
               <Link
-                to="/projects"
+                to="/work"
                 className="inline-flex items-center gap-3 px-6 py-4 rounded-full bg-white text-black hover:bg-emerald-400 transition"
               >
                 View My Work <LuArrowUpRight />
@@ -273,15 +273,17 @@ const Home = () => {
               </h2>
             </div>
 
-            <ArrowLink to="/projects" className="hidden md:flex text-white/50">
+            <ArrowLink to="/work" className="hidden md:flex text-white/50">
               View all projects
             </ArrowLink>
           </div>
 
           <div className="grid md:grid-cols-2 gap-8">
             {projects.slice(0, 4).map((project, i) => (
-              <Link
-                to={`/projects/${project.id || i}`}
+              <a
+                href={project.link}
+                target="_blank"
+                rel="noopener noreferrer"
                 key={project.id || i}
                 className="group"
               >
@@ -323,7 +325,7 @@ const Home = () => {
                     ))}
                   </div>
                 </div>
-              </Link>
+              </a>
             ))}
           </div>
         </div>

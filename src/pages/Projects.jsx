@@ -1,37 +1,69 @@
-import { useState } from 'react';
+import { useState, useMemo } from 'react';
 import PageHeader from '../components/PageHeader';
 import ProjectCard from '../components/ProjectCard';
 import projects from '../data/projects';
+import { normalizeCategory, getCategories, filterProjects } from '../utils/category';
 
 function Projects() {
-  const categories = ['All', ...new Set(projects.map(p => p.category))];
-  const [filter, setFilter] = useState('All');
-  const filtered = filter === 'All' ? projects : projects.filter(p => p.category === filter);
+  const [activeCategory, setActiveCategory] = useState('all');
+
+  const categories = useMemo(() => getCategories(projects), []);
+  const filtered = useMemo(() => filterProjects(projects, activeCategory), [activeCategory]);
+
+  const handleSelect = (c) => {
+    setActiveCategory(normalizeCategory(c) === 'all' ? 'all' : c);
+  };
+
+  const isSelected = (c) => {
+    return normalizeCategory(c) === normalizeCategory(activeCategory);
+  };
 
   return (
     <>
-      <PageHeader eyebrow="Portfolio" title="My Projects" subtitle="A selection of websites, clones, interactive apps, and UI experiments I've built to practice and showcase my skills." />
+      <PageHeader
+        eyebrow="Portfolio"
+        title="My Projects"
+        subtitle="A selection of websites, clones, interactive apps, and UI experiments I've built to practice and showcase my skills."
+      />
       <section className="section-padding border-t border-default">
         <div className="container-max">
           {/* Filter tabs */}
-          <div className="flex flex-wrap gap-2 mb-12">
-            {categories.map(c=>(
-              <button
-                key={c}
-                onClick={()=>setFilter(c)}
-                className={`px-5 py-2 rounded-full text-sm font-medium transition-all data-cursor-hover ${filter===c?'bg-accent text-white':'border border-default text-secondary hover:border-accent hover:text-accent'}`}
-                data-cursor-hover
-              >
-                {c}
-              </button>
-            ))}
+          <div className="flex flex-wrap gap-2 mb-12" role="tablist" aria-label="Project categories">
+            {categories.map((c) => {
+              const active = isSelected(c);
+              return (
+                <button
+                  key={c}
+                  type="button"
+                  onClick={() => handleSelect(c)}
+                  role="tab"
+                  aria-selected={active}
+                  className={`px-5 py-2 rounded-full text-sm font-medium transition-all ${
+                    active
+                      ? 'bg-accent text-white'
+                      : 'border border-default text-secondary hover:border-accent hover:text-accent'
+                  }`}
+                  data-cursor-hover
+                >
+                  {c}
+                </button>
+              );
+            })}
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {filtered.map(p=><ProjectCard key={p.id} p={p} />)}
+            {filtered.map((p) => (
+              <ProjectCard key={p.id} p={p} />
+            ))}
           </div>
+          {filtered.length === 0 && (
+            <div className="py-16 text-center text-secondary">
+              <p>No projects found in this category.</p>
+            </div>
+          )}
         </div>
       </section>
     </>
   );
 }
+
 export default Projects;

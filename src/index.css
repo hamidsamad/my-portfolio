@@ -392,6 +392,21 @@ body {
 .project-arrow { position: absolute; top: 28px; right: 28px; width: 44px; height: 44px; border-radius: 50%; background: rgba(0,0,0,0.5); backdrop-filter: blur(10px); display: flex; align-items: center; justify-content: center; color: #fff; transform: scale(0) rotate(-45deg); transition: transform 0.4s cubic-bezier(0.25,0.46,0.45,0.94); }
 .project-card:hover .project-arrow { transform: scale(1) rotate(0deg); }
 
+@keyframes projectFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.project-item-fade {
+  animation: projectFadeIn 0.35s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
 /* Hero */
 .hero-section {
   min-height: 100vh;
