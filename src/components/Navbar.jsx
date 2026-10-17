@@ -24,7 +24,7 @@ function Navbar({ onMenu }) {
       <div className="nav-inner">
         <Link to="/" className="nav-logo" data-cursor>
           <div className="nav-logo-mark"><LuCode size={16} /></div>
-          <span>Hamid<span className="text-[var(--accent)]">.</span></span>
+          <span className="font-serif font-bold tracking-tight text-lg">Hamid<span className="text-[var(--accent)]">.</span></span>
         </Link>
         <div className="nav-links">
           {links.map(l => (
@@ -37,7 +37,7 @@ function Navbar({ onMenu }) {
           <button onClick={toggle} className="theme-btn" aria-label="Toggle theme" data-cursor>
             {theme === 'dark' ? <LuSun size={16} /> : <LuMoon size={16} />}
           </button>
-          <Link to="/contact" className="btn btn-accent hidden md:inline-flex !py-2 !px-5 !text-xs" data-cursor>Let's Talk</Link>
+          <Link to="/contact" className="btn btn-accent hidden md:inline-flex !py-2.5 !px-6 !text-xs font-semibold shadow-md" data-cursor>Let's Talk</Link>
           <button onClick={onMenu} className="menu-btn" data-cursor><LuMenu size={16} /></button>
         </div>
       </div>

@@ -9,8 +9,8 @@ function About() {
       <section className="section !pt-40">
         <div className="container grid lg:grid-cols-12 gap-16 items-start">
           <div className="lg:col-span-5 reveal-element">
-            <div className="aspect-[4/5] rounded-[var(--radius)] glass flex items-center justify-center relative overflow-hidden group">
-              <div className="bg-blob" style={{ width: 300, height: 300, background: 'var(--accent)', opacity: 0.2, top: '20%', left: '10%' }} />
+            <div className="aspect-[4/5] rounded-[var(--radius)] glass flex items-center justify-center relative overflow-hidden group border border-[var(--border-strong)] shadow-2xl">
+              <div className="bg-blob" style={{ width: 320, height: 320, background: 'var(--accent)', opacity: 0.22, top: '15%', left: '10%' }} />
               <img
                 src="/hamid-ali-baloch.jpeg"
                 alt="Hamid Ali Baloch"
@@ -23,8 +23,8 @@ function About() {
               {/* Subtle dark gradient scrim to guarantee text legibility over light-toned clothing */}
               <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-transparent pointer-events-none z-[1]" />
               <div className="absolute bottom-6 left-6 right-6 z-10">
-                <h3 className="text-2xl font-bold text-white drop-shadow-sm">Hamid Ali Baloch</h3>
-                <p className="text-zinc-300 text-sm">Web Developer & Designer</p>
+                <h3 className="text-2xl font-bold text-white drop-shadow-sm font-serif">Hamid Ali Baloch</h3>
+                <p className="text-[var(--accent-2)] text-sm font-medium">Web Developer & Designer</p>
               </div>
             </div>
             <div className="grid grid-cols-2 gap-3 mt-6">

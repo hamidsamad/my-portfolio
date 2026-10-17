@@ -37,7 +37,7 @@ function ProjectCard({ p }) {
             );
           })}
         </div>
-        <h3 className="text-lg font-semibold mb-2 text-primary group-hover:text-accent transition-colors">
+        <h3 className="text-xl font-bold mb-2 text-primary group-hover:text-accent font-serif transition-colors">
           {p.title}
         </h3>
         <p className="text-sm text-secondary leading-relaxed line-clamp-2 mb-5">
@@ -49,7 +49,7 @@ function ProjectCard({ p }) {
               href={liveUrl}
               target="_blank"
               rel="noreferrer"
-              className="inline-flex items-center gap-1.5 text-sm text-accent hover:underline"
+              className="inline-flex items-center gap-1.5 text-sm font-semibold text-accent hover:text-[var(--accent-2)] transition-colors"
             >
               <LuExternalLink size={14} /> Live Demo
             </a>
@@ -59,7 +59,7 @@ function ProjectCard({ p }) {
               href={p.githubUrl}
               target="_blank"
               rel="noreferrer"
-              className="inline-flex items-center gap-1.5 text-sm text-secondary hover:text-primary"
+              className="inline-flex items-center gap-1.5 text-sm text-secondary hover:text-accent transition-colors"
             >
               <LuGithub size={14} /> Code
             </a>

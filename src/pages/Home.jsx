@@ -38,7 +38,7 @@ const stats = [
 const ArrowLink = ({ to, children, className = "" }) => (
   <Link
     to={to}
-    className={`group inline-flex items-center gap-2 hover:text-emerald-400 transition ${className}`}
+    className={`group inline-flex items-center gap-2 text-[var(--accent)] hover:text-[var(--accent-2)] transition font-medium ${className}`}
   >
     {children}
     <LuArrowUpRight className="group-hover:translate-x-1 group-hover:-translate-y-1 transition" />
@@ -47,10 +47,10 @@ const ArrowLink = ({ to, children, className = "" }) => (
 
 const SectionTitle = ({ number, title }) => (
   <div>
-    <span className="text-xs uppercase tracking-[.3em] text-emerald-400">
+    <span className="text-xs uppercase tracking-[.3em] text-[var(--accent)] font-semibold">
       {number} / {title}
     </span>
-    <h2 className="text-4xl md:text-6xl font-semibold tracking-[-.04em] mt-5">
+    <h2 className="text-4xl md:text-6xl font-semibold tracking-[-.03em] mt-5 font-serif">
       {title === "About" ? "Crafting web experiences" : title}
     </h2>
   </div>
@@ -114,23 +114,23 @@ const Home = () => {
         ref={hero}
         className="hero-section relative min-h-screen overflow-hidden flex items-center"
       >
-        <div className="blob-1 absolute w-96 h-96 rounded-full bg-emerald-500/10 blur-3xl -top-20 -left-20" />
-        <div className="blob-2 absolute w-[32rem] h-[32rem] rounded-full bg-blue-500/10 blur-3xl top-1/3 -right-40" />
-        <div className="blob-3 absolute w-80 h-80 rounded-full bg-purple-500/10 blur-3xl bottom-0 left-1/3" />
+        <div className="blob-1 absolute w-[34rem] h-[34rem] rounded-full bg-[var(--accent)]/15 blur-[120px] -top-20 -left-20 pointer-events-none" />
+        <div className="blob-2 absolute w-[30rem] h-[30rem] rounded-full bg-[var(--emerald)]/20 blur-[120px] top-1/3 -right-32 pointer-events-none" />
+        <div className="blob-3 absolute w-96 h-96 rounded-full bg-[var(--accent-2)]/12 blur-[100px] bottom-0 left-1/3 pointer-events-none" />
 
         <div className="hero-content relative z-10 max-w-7xl mx-auto px-6 w-full pt-28 pb-20">
           <div className="max-w-5xl">
             <div className="hero-eyebrow flex items-center gap-3 mb-8">
-              <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
-              <span className="text-sm uppercase tracking-[.25em] text-emerald-400">
+              <span className="w-2.5 h-2.5 rounded-full bg-[var(--accent)] animate-pulse shadow-[0_0_12px_var(--accent)]" />
+              <span className="text-xs uppercase tracking-[.3em] text-[var(--accent)] font-semibold">
                 Frontend Developer & Digital Craftsman
               </span>
             </div>
 
-            <h1 className="hero-title text-[clamp(3.5rem,10vw,9rem)] leading-[.85] tracking-[-.06em] font-bold">
+            <h1 className="hero-title text-[clamp(3.5rem,10vw,9rem)] leading-[.90] tracking-[-.03em] font-bold font-serif">
               Hamid Ali
               <br />
-              <span className="text-[var(--text-3)]">Baloch.</span>
+              <span className="accent-text italic">Baloch.</span>
             </h1>
 
             <p className="hero-description mt-10 max-w-2xl text-lg md:text-xl text-[var(--text-2)] leading-relaxed">
@@ -141,14 +141,16 @@ const Home = () => {
             <div className="hero-actions flex flex-wrap gap-4 mt-10">
               <Link
                 to="/work"
-                className="inline-flex items-center gap-3 px-6 py-4 rounded-full bg-[var(--text)] text-[var(--bg)] hover:bg-[var(--accent)] hover:text-white transition font-medium"
+                className="btn-accent inline-flex items-center gap-3 px-8 py-4 rounded-full font-semibold shadow-xl transition"
+                data-cursor
               >
                 View My Work <LuArrowUpRight />
               </Link>
 
               <Link
                 to="/contact"
-                className="inline-flex items-center gap-3 px-6 py-4 rounded-full border border-[var(--border-strong)] text-[var(--text)] hover:border-[var(--accent)] hover:text-[var(--accent)] transition font-medium"
+                className="btn-ghost inline-flex items-center gap-3 px-8 py-4 rounded-full font-semibold transition"
+                data-cursor
               >
                 Let's Talk <LuMail />
               </Link>
@@ -175,14 +177,14 @@ const Home = () => {
 
       <section className="py-28 md:py-40 px-6">
         <div className="max-w-7xl mx-auto grid lg:grid-cols-[.8fr_1.2fr] gap-12 lg:gap-24">
-          <span className="text-xs uppercase tracking-[.3em] text-emerald-400">
+          <span className="text-xs uppercase tracking-[.3em] text-[var(--accent)] font-semibold">
             01 / About
           </span>
 
           <div>
-            <h2 className="text-4xl md:text-6xl lg:text-7xl leading-[.95]">
+            <h2 className="text-4xl md:text-6xl lg:text-7xl leading-[1.02] font-serif">
               Crafting web experiences
-              <span className="text-[var(--text-3)]"> that actually feel good.</span>
+              <span className="accent-text italic"> that actually feel good.</span>
             </h2>
 
             <p className="mt-8 text-lg text-[var(--text-2)] leading-relaxed">
@@ -192,14 +194,14 @@ const Home = () => {
               memorable.
             </p>
 
-            <ArrowLink to="/about" className="mt-8 text-emerald-400">
+            <ArrowLink to="/about" className="mt-8">
               More about me
             </ArrowLink>
 
             <div className="grid grid-cols-3 gap-6 mt-16 pt-8 border-t border-[var(--border)]">
               {stats.map(([number, label]) => (
                 <div key={label}>
-                  <b className="text-3xl md:text-4xl">{number}</b>
+                  <b className="text-3xl md:text-4xl font-serif">{number}</b>
                   <p className="text-sm text-[var(--text-3)] mt-2">{label}</p>
                 </div>
               ))}
@@ -212,10 +214,10 @@ const Home = () => {
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-col md:flex-row justify-between gap-6 mb-16">
             <div>
-              <span className="text-xs uppercase tracking-[.3em] text-emerald-400">
+              <span className="text-xs uppercase tracking-[.3em] text-[var(--accent)] font-semibold">
                 02 / Services
               </span>
-              <h2 className="text-4xl md:text-6xl font-semibold mt-5">
+              <h2 className="text-4xl md:text-6xl font-semibold mt-5 font-serif">
                 What I do.
               </h2>
             </div>
@@ -234,7 +236,7 @@ const Home = () => {
                 <Link
                   to="/services"
                   key={service.num || i}
-                  className="group p-7 md:p-8 rounded-2xl border border-[var(--border)] bg-[var(--surface)] hover:border-[var(--accent)] hover:bg-[var(--surface-solid)] transition"
+                  className="group p-7 md:p-8 rounded-2xl border border-[var(--border)] bg-[var(--surface)] hover:border-[var(--accent)] hover:shadow-xl hover:shadow-[var(--accent-glow)] transition"
                 >
                   <div className="flex justify-between">
                     <span className="text-xs text-[var(--text-3)]">
@@ -242,13 +244,13 @@ const Home = () => {
                     </span>
 
                     <div
-                      className={`w-14 h-14 rounded-xl flex items-center justify-center border ${service.iconBg} ${service.iconBorder}`}
+                      className="w-14 h-14 rounded-xl flex items-center justify-center border border-[var(--accent)]/30 bg-[var(--accent-soft)] text-[var(--accent)] group-hover:bg-[var(--accent)] group-hover:text-[#141009] transition-all"
                     >
-                      <Icon className={service.iconColor} size={27} />
+                      <Icon size={27} />
                     </div>
                   </div>
 
-                  <h3 className="text-2xl mt-12 group-hover:text-emerald-400">
+                  <h3 className="text-2xl mt-12 group-hover:text-[var(--accent)] font-serif transition-colors">
                     {service.title}
                   </h3>
 
@@ -266,10 +268,10 @@ const Home = () => {
         <div className="max-w-7xl mx-auto">
           <div className="flex justify-between items-end mb-16">
             <div>
-              <span className="text-xs uppercase tracking-[.3em] text-emerald-400">
+              <span className="text-xs uppercase tracking-[.3em] text-[var(--accent)] font-semibold">
                 03 / Selected Work
               </span>
-              <h2 className="text-4xl md:text-6xl font-semibold mt-5">
+              <h2 className="text-4xl md:text-6xl font-semibold mt-5 font-serif">
                 Recent projects.
               </h2>
             </div>
@@ -291,15 +293,15 @@ const Home = () => {
                 key={project.id || i}
                 className="group"
               >
-                <div className="relative aspect-[16/10] overflow-hidden rounded-2xl border border-[var(--border)]">
+                <div className="relative aspect-[16/10] overflow-hidden rounded-2xl border border-[var(--border)] shadow-lg">
                   <img
                     src={project.img}
                     alt={project.title}
                     className="w-full h-full object-cover group-hover:scale-105 transition duration-700"
                   />
 
-                  <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 flex items-center justify-center transition">
-                    <span className="w-16 h-16 rounded-full bg-white text-black flex items-center justify-center">
+                  <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 flex items-center justify-center transition backdrop-blur-[2px]">
+                    <span className="w-16 h-16 rounded-full bg-[var(--accent)] text-[#161108] flex items-center justify-center shadow-xl font-bold">
                       <LuArrowUpRight size={24} />
                     </span>
                   </div>
@@ -310,7 +312,7 @@ const Home = () => {
                     {project.cat} • {project.year}
                   </p>
 
-                  <h3 className="text-2xl md:text-3xl mt-3 group-hover:text-emerald-400">
+                  <h3 className="text-2xl md:text-3xl mt-3 group-hover:text-[var(--accent)] font-serif transition-colors">
                     {project.title}
                   </h3>
 
@@ -322,7 +324,7 @@ const Home = () => {
                     {project.tags?.slice(0, 3).map((tag) => (
                       <span
                         key={tag}
-                        className="px-3 py-1.5 text-xs rounded-full border border-[var(--border)] text-[var(--text-3)]"
+                        className="px-3 py-1.5 text-xs rounded-full border border-[var(--border)] text-[var(--text-3)] bg-[var(--accent-soft)]"
                       >
                         {tag}
                       </span>
@@ -337,28 +339,34 @@ const Home = () => {
 
       <section className="py-28 md:py-40 px-6">
         <div className="max-w-7xl mx-auto">
-          <div className="rounded-3xl border border-[var(--border)] bg-[var(--surface)] p-8 md:p-16 lg:p-20">
-            <div className="flex items-center gap-2 text-emerald-400 mb-8">
-              <LuStar fill="currentColor" />
-              Have a project in mind?
+          <div className="rounded-3xl border border-[var(--border-strong)] bg-[var(--surface)] p-8 md:p-16 lg:p-20 shadow-2xl relative overflow-hidden backdrop-blur-md">
+            <div className="absolute -top-32 -right-32 w-96 h-96 rounded-full bg-[var(--accent)]/15 blur-3xl pointer-events-none" />
+            <div className="absolute -bottom-32 -left-32 w-80 h-80 rounded-full bg-[var(--emerald)]/20 blur-3xl pointer-events-none" />
+
+            <div className="relative z-10">
+              <div className="flex items-center gap-2 text-[var(--accent)] mb-8 font-medium">
+                <LuStar fill="currentColor" />
+                Have a project in mind?
+              </div>
+
+              <h2 className="text-4xl md:text-6xl lg:text-8xl font-semibold tracking-[-.03em] font-serif">
+                Let's build something
+                <span className="accent-text italic"> great together.</span>
+              </h2>
+
+              <p className="text-lg text-[var(--text-2)] max-w-xl mt-8">
+                Have an idea, project, or opportunity? I'd love to hear about it
+                and see how we can turn it into something meaningful.
+              </p>
+
+              <Link
+                to="/contact"
+                className="btn-accent inline-flex items-center gap-3 mt-10 px-8 py-4 rounded-full font-semibold shadow-xl transition"
+                data-cursor
+              >
+                Start a conversation <LuArrowUpRight />
+              </Link>
             </div>
-
-            <h2 className="text-4xl md:text-6xl lg:text-8xl font-semibold tracking-[-.05em]">
-              Let's build something
-              <span className="text-[var(--text-3)]"> great together.</span>
-            </h2>
-
-            <p className="text-lg text-[var(--text-2)] max-w-xl mt-8">
-              Have an idea, project, or opportunity? I'd love to hear about it
-              and see how we can turn it into something meaningful.
-            </p>
-
-            <Link
-              to="/contact"
-              className="inline-flex items-center gap-3 mt-10 px-7 py-4 rounded-full bg-[var(--accent)] text-white hover:bg-[var(--text)] hover:text-[var(--bg)] transition font-medium"
-            >
-              Start a conversation <LuArrowUpRight />
-            </Link>
           </div>
         </div>
       </section>

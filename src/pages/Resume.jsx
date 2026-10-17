@@ -41,15 +41,15 @@ function Resume() {
         <div className="grid lg:grid-cols-2 gap-16">
           <div>
             <div className="flex items-center gap-3 mb-8 reveal-element">
-              <div className="w-10 h-10 rounded-xl bg-[var(--accent-soft)] text-[var(--accent)] flex items-center justify-center"><LuBriefcase size={20}/></div>
-              <h2 className="text-2xl font-bold">Experience</h2>
+              <div className="w-10 h-10 rounded-xl bg-[var(--accent-soft)] text-[var(--accent)] flex items-center justify-center border border-[var(--border)]"><LuBriefcase size={20}/></div>
+              <h2 className="text-2xl font-bold font-serif">Experience</h2>
             </div>
             <Timeline items={experiences} icon={LuBriefcase}/>
           </div>
           <div>
             <div className="flex items-center gap-3 mb-8 reveal-element">
-              <div className="w-10 h-10 rounded-xl bg-blue-500/10 text-blue-500 flex items-center justify-center"><LuGraduationCap size={20}/></div>
-              <h2 className="text-2xl font-bold">Education</h2>
+              <div className="w-10 h-10 rounded-xl bg-[var(--emerald-soft)] text-[var(--emerald-light)] flex items-center justify-center border border-[var(--emerald)]/25"><LuGraduationCap size={20}/></div>
+              <h2 className="text-2xl font-bold font-serif">Education</h2>
             </div>
             <Timeline items={education} icon={LuGraduationCap}/>
           </div>

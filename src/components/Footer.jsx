@@ -9,7 +9,7 @@ function Footer() {
           <div className="md:col-span-2">
             <Link to="/" className="nav-logo mb-6" data-cursor>
               <div className="nav-logo-mark"><LuCode size={16} /></div>
-              <span>Hamid Ali<span className="text-[var(--accent)]">.</span></span>
+              <span className="font-serif font-bold tracking-tight text-lg">Hamid Ali<span className="text-[var(--accent)]">.</span></span>
             </Link>
             <p className="text-[var(--text-2)] text-sm leading-relaxed max-w-md mb-8 mt-4">
               A passionate frontend developer crafting modern, performant, and accessible web experiences. Available for freelance worldwide.
