@@ -121,9 +121,9 @@ const Home = () => {
         <div className="hero-content relative z-10 max-w-7xl mx-auto px-6 w-full pt-28 pb-20">
           <div className="max-w-5xl">
             <div className="hero-eyebrow flex items-center gap-3 mb-8">
-              <span className="w-2.5 h-2.5 rounded-full bg-[var(--accent)] animate-pulse shadow-[0_0_12px_var(--accent)]" />
-              <span className="text-xs uppercase tracking-[.3em] text-[var(--accent)] font-semibold">
-                Full Stack Developer
+              <span className="w-2.5 h-2.5 rounded-full bg-[var(--accent)] animate-pulse shadow-[0_0_12px_var(--accent)] shrink-0" />
+              <span className="text-xs uppercase tracking-[.25em] text-[var(--accent)] font-semibold">
+                Full Stack Developer (Frontend &amp; Backend)
               </span>
             </div>
 

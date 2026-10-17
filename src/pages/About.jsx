@@ -24,7 +24,7 @@ function About() {
               <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-transparent pointer-events-none z-[1]" />
               <div className="absolute bottom-6 left-6 right-6 z-10">
                 <h3 className="text-2xl font-bold text-white drop-shadow-sm font-serif">Hamid Ali Baloch</h3>
-                <p className="text-[var(--accent-2)] text-sm font-medium">Full Stack Developer</p>
+                <p className="text-[var(--accent-2)] text-sm font-medium">Full Stack Developer (Frontend &amp; Backend)</p>
               </div>
             </div>
             <div className="grid grid-cols-2 gap-3 mt-6">
