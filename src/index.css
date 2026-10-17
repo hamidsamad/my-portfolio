@@ -5,35 +5,37 @@
 /* =========================
    Premium Design Tokens
    ========================= */
-:root {
-  /* Royal Velvet Noir & Peacock Emerald Base */
-  --bg: #091312;
-  --bg-2: #0e1c1a;
-  --bg-3: #142623;
-  --surface: rgba(15, 30, 27, 0.76);
-  --surface-solid: #132421;
+:root,
+.dark-mode,
+.dark {
+  /* Royal Peacock Emerald & Velvet Teal Green Base (from user reference photo) */
+  --bg: #0d332c;
+  --bg-2: #113d35;
+  --bg-3: #164a41;
+  --surface: rgba(18, 59, 52, 0.78);
+  --surface-solid: #14453d;
   /* Imperial Gold Borders */
-  --border: rgba(212, 175, 55, 0.22);
-  --border-strong: rgba(212, 175, 55, 0.45);
+  --border: rgba(229, 193, 88, 0.25);
+  --border-strong: rgba(229, 193, 88, 0.48);
   /* Luminous Warm Alabaster Cream & Silk Taupe */
-  --text: #fbf7ee;
-  --text-2: #cfc6b6;
-  --text-3: #9b9181;
+  --text: #fcf8f0;
+  --text-2: #d8cebe;
+  --text-3: #a69a88;
   /* Royal Antique & Champagne Gold Accents */
-  --accent: #d4af37;
-  --accent-2: #f3d489;
-  --accent-glow: rgba(212, 175, 55, 0.28);
-  --accent-soft: rgba(212, 175, 55, 0.12);
-  --accent-dark: #9e7526;
-  /* Velvet Peacock Emerald Green (the sofa green from photo) */
-  --emerald: #146860;
-  --emerald-light: #22998d;
-  --emerald-soft: rgba(20, 104, 96, 0.22);
-  --emerald-glow: rgba(34, 153, 141, 0.35);
+  --accent: #e5c158;
+  --accent-2: #f7de98;
+  --accent-glow: rgba(229, 193, 88, 0.32);
+  --accent-soft: rgba(229, 193, 88, 0.14);
+  --accent-dark: #b88a26;
+  /* Velvet Peacock Emerald Green Accents */
+  --emerald: #1a7569;
+  --emerald-light: #28ab9b;
+  --emerald-soft: rgba(26, 117, 105, 0.26);
+  --emerald-glow: rgba(40, 171, 155, 0.38);
   /* Cream Highlights */
   --cream: #faf5eb;
-  --cream-soft: rgba(250, 245, 235, 0.08);
-  --nav-bg: rgba(9, 19, 18, 0.85);
+  --cream-soft: rgba(250, 245, 235, 0.10);
+  --nav-bg: rgba(13, 51, 44, 0.88);
   --radius: 20px;
   --radius-sm: 12px;
 }
@@ -435,7 +437,7 @@ body {
 .mobile-menu a:hover, .mobile-menu a.active { color: var(--accent); }
 .mobile-overlay {
   position: fixed; inset: 0; z-index: 150;
-  background: rgba(0,0,0,0.7); backdrop-filter: blur(4px);
+  background: rgba(10, 38, 33, 0.80); backdrop-filter: blur(4px);
   opacity: 0; pointer-events: none;
   transition: opacity 0.4s ease;
 }

@@ -45,11 +45,11 @@ function SkillSwapCard() {
             href={projectUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="block relative overflow-hidden rounded-2xl border border-[var(--border)] bg-black/50 shadow-xl group/img"
+            className="block relative overflow-hidden rounded-2xl border border-[var(--border)] bg-[var(--surface)] shadow-xl group/img"
             data-cursor
             title="Open SkillSwap PK live application"
           >
-            <div className="aspect-[16/10] sm:aspect-[16/10] overflow-hidden bg-slate-900/60">
+            <div className="aspect-[16/10] sm:aspect-[16/10] overflow-hidden bg-[var(--bg-2)]">
               <img
                 src={imageUrl}
                 alt="SkillSwap PK - Peer-to-Peer Skill Exchange Platform"
