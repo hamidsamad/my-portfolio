@@ -177,7 +177,7 @@ const Home = () => {
       <section className="py-28 md:py-40 px-6">
         <div className="max-w-7xl mx-auto grid lg:grid-cols-[.8fr_1.2fr] gap-12 lg:gap-24">
           <span className="text-xs uppercase tracking-[.3em] text-[var(--accent)] font-semibold">
-            STRUCTURE &amp; EXPERIENCE / 16
+            01 &amp; Services
           </span>
 
           <div>

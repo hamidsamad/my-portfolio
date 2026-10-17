@@ -7,9 +7,16 @@ function Footer() {
       <div className="container">
         <div className="grid md:grid-cols-4 gap-10 mb-16">
           <div className="md:col-span-2">
-            <Link to="/" className="nav-logo mb-6" data-cursor>
-              <div className="nav-logo-mark"><LuCode size={16} /></div>
-              <span className="font-serif font-bold tracking-tight text-lg">Hamid Ali<span className="text-[var(--accent)]">.</span></span>
+            <Link to="/" className="nav-logo mb-6 group inline-flex items-center gap-3.5" data-cursor>
+              <img
+                src="/logo.jpg"
+                alt="Hamid Ali Logo"
+                className="w-12 h-12 rounded-full object-cover border border-[var(--accent)]/60 shadow-[0_0_14px_var(--accent-glow)] group-hover:scale-105 transition-transform"
+              />
+              <div>
+                <span className="font-serif font-bold tracking-tight text-xl block leading-tight">Hamid Ali<span className="text-[var(--accent)]">.</span></span>
+                <span className="text-[10px] tracking-[0.2em] uppercase text-[var(--accent)] font-semibold block mt-0.5">Full Stack Developer</span>
+              </div>
             </Link>
             <p className="text-[var(--text-2)] text-sm leading-relaxed max-w-md mb-8 mt-4">
               A passionate full stack developer crafting modern, performant, and scalable web experiences across frontend and backend. Available for freelance worldwide.

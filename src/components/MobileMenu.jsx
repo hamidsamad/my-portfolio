@@ -15,7 +15,18 @@ function MobileMenu({ open, onClose }) {
       <div className={`mobile-overlay ${open ? 'open' : ''}`} onClick={onClose} />
       <div className={`mobile-menu ${open ? 'open' : ''}`}>
         <button onClick={onClose} className="theme-btn absolute top-6 right-6" data-cursor><LuX size={18} /></button>
-        <nav className="flex flex-col gap-2 mt-8">
+        <div className="flex items-center gap-3 mb-8 pb-6 border-b border-[var(--border)] pt-2">
+          <img
+            src="/logo.jpg"
+            alt="Hamid Ali Logo"
+            className="w-10 h-10 rounded-full object-cover border border-[var(--accent)]/60 shadow-md"
+          />
+          <div>
+            <span className="font-serif font-bold text-lg block leading-tight">Hamid Ali<span className="text-[var(--accent)]">.</span></span>
+            <span className="text-[9px] uppercase tracking-widest text-[var(--accent)] font-semibold block mt-0.5">Full Stack Developer</span>
+          </div>
+        </div>
+        <nav className="flex flex-col gap-2">
           {links.map(l => (
             <NavLink key={l.to} to={l.to} end={l.end} onClick={onClose}
               className={({isActive}) => isActive ? 'active' : ''} data-cursor>

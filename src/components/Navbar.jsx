@@ -22,8 +22,12 @@ function Navbar({ onMenu }) {
   return (
     <nav className={`nav-fixed ${scrolled ? 'scrolled' : ''}`}>
       <div className="nav-inner">
-        <Link to="/" className="nav-logo" data-cursor>
-          <div className="nav-logo-mark"><LuCode size={16} /></div>
+        <Link to="/" className="nav-logo group flex items-center gap-3" data-cursor>
+          <img
+            src="/logo.jpg"
+            alt="Hamid Ali Logo"
+            className="w-8 h-8 rounded-full object-cover border border-[var(--accent)]/60 shadow-[0_0_10px_var(--accent-glow)] group-hover:scale-105 transition-transform"
+          />
           <span className="font-serif font-bold tracking-tight text-lg">Hamid<span className="text-[var(--accent)]">.</span></span>
         </Link>
         <div className="nav-links">
