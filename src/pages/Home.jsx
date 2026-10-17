@@ -133,9 +133,8 @@ const Home = () => {
               <span className="accent-text italic">Baloch.</span>
             </h1>
 
-            <p className="hero-description mt-10 max-w-2xl text-lg md:text-xl text-[var(--text-2)] leading-relaxed">
-              I build modern digital experiences that combine clean design,
-              thoughtful interactions, and powerful technology.
+            <p className="hero-description mt-10 max-w-3xl text-lg md:text-xl text-[var(--text-2)] leading-relaxed">
+              I believe great digital experiences begin with thoughtful ideas, purposeful design, and attention to every detail. I combine creativity and technology to build intuitive interfaces, meaningful interactions, and powerful web solutions that balance simplicity with functionality, delivering digital experiences that feel effortless, perform beautifully, and stand out for all the right reasons.
             </p>
 
             <div className="hero-actions flex flex-wrap gap-4 mt-10">

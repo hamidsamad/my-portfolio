@@ -16,8 +16,8 @@ function Work() {
             Selected<br />
             <span className="accent-text">Work.</span>
           </h1>
-          <p className="text-[var(--text-2)] text-lg max-w-xl leading-relaxed">
-            A curated selection of websites, clones, interactive applications, and UI projects I've built to learn, practice, and showcase my skills.
+          <p className="text-[var(--text-2)] text-lg max-w-2xl leading-relaxed">
+            Explore a selection of digital experiences I've designed and developed, ranging from modern websites and interactive applications to full-stack platforms and creative UI experiments. Each project reflects my passion for clean design, thoughtful functionality, continuous learning, and building meaningful solutions with modern web technologies.
           </p>
         </div>
 

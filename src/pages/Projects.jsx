@@ -24,7 +24,7 @@ function Projects() {
       <PageHeader
         eyebrow="Portfolio"
         title="My Projects"
-        subtitle="A selection of websites, clones, interactive apps, and UI experiments I've built to practice and showcase my skills."
+        subtitle="Explore a selection of digital experiences I've designed and developed, ranging from modern websites and interactive applications to full-stack platforms and creative UI experiments. Each project reflects my passion for clean design, thoughtful functionality, continuous learning, and building meaningful solutions with modern web technologies."
       />
       <section className="section-padding border-t border-default">
         <div className="container-max">
