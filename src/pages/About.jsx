@@ -9,12 +9,22 @@ function About() {
       <section className="section !pt-40">
         <div className="container grid lg:grid-cols-12 gap-16 items-start">
           <div className="lg:col-span-5 reveal-element">
-            <div className="aspect-[4/5] rounded-[var(--radius)] glass flex items-center justify-center relative overflow-hidden">
+            <div className="aspect-[4/5] rounded-[var(--radius)] glass flex items-center justify-center relative overflow-hidden group">
               <div className="bg-blob" style={{ width: 300, height: 300, background: 'var(--accent)', opacity: 0.2, top: '20%', left: '10%' }} />
-              <img src="./public/hamid-ali-baloch.jpeg" alt="Hamid Ali Baloch" className="absolute top-0 left-0 w-full h-full object-cover z-10" />
+              <img
+                src="/hamid-ali-baloch.jpeg"
+                alt="Hamid Ali Baloch"
+                className="absolute top-0 left-0 w-full h-full object-cover object-top transition-transform duration-700 ease-out group-hover:scale-105"
+                onError={(e) => {
+                  // Fallback in case of path or extension variations
+                  e.currentTarget.src = '/hamid-ali-baloch.jpg';
+                }}
+              />
+              {/* Subtle dark gradient scrim to guarantee text legibility over light-toned clothing */}
+              <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-transparent pointer-events-none z-[1]" />
               <div className="absolute bottom-6 left-6 right-6 z-10">
-                <h3 className="text-2xl font-bold">Hamid Ali Baloch</h3>
-                <p className="text-[var(--text-2)] text-sm">Web Developer & Designer</p>
+                <h3 className="text-2xl font-bold text-white drop-shadow-sm">Hamid Ali Baloch</h3>
+                <p className="text-zinc-300 text-sm">Web Developer & Designer</p>
               </div>
             </div>
             <div className="grid grid-cols-2 gap-3 mt-6">
