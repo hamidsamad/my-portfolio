@@ -12,7 +12,7 @@ function Footer() {
               <span className="font-serif font-bold tracking-tight text-lg">Hamid Ali<span className="text-[var(--accent)]">.</span></span>
             </Link>
             <p className="text-[var(--text-2)] text-sm leading-relaxed max-w-md mb-8 mt-4">
-              A passionate frontend developer crafting modern, performant, and accessible web experiences. Available for freelance worldwide.
+              A passionate full stack developer crafting modern, performant, and scalable web experiences across frontend and backend. Available for freelance worldwide.
             </p>
             <div className="flex gap-3">
               {[{i:LuGithub,h:'https://github.com/hamidsamad'},{i:LuLinkedin,h:'#'},{i:LuTwitter,h:'#'},{i:LuMail,h:'mailto:hamidsamad0786@gmail.com'}].map((s,i)=>(

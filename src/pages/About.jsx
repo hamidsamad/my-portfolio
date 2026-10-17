@@ -24,12 +24,12 @@ function About() {
               <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-transparent pointer-events-none z-[1]" />
               <div className="absolute bottom-6 left-6 right-6 z-10">
                 <h3 className="text-2xl font-bold text-white drop-shadow-sm font-serif">Hamid Ali Baloch</h3>
-                <p className="text-[var(--accent-2)] text-sm font-medium">Web Developer & Designer</p>
+                <p className="text-[var(--accent-2)] text-sm font-medium">Full Stack Developer</p>
               </div>
             </div>
             <div className="grid grid-cols-2 gap-3 mt-6">
               {[
-                { i: LuMapPin, l: 'Location', v: 'Pakistan' }, { i: LuTarget, l: 'Focus', v: 'Web Dev' },
+                { i: LuMapPin, l: 'Location', v: 'Pakistan' }, { i: LuTarget, l: 'Focus', v: 'Full Stack' },
                 { i: LuLanguages, l: 'Languages', v: 'English, Urdu' }, { i: LuHeart, l: 'Status', v: 'Available', accent: true }
               ].map((c, i) => (
                 <div key={i} className="card p-4 reveal-element">
@@ -45,7 +45,7 @@ function About() {
               <span className="eyebrow">About Me</span>
               <h1 className="h-xl mt-6 mb-6">Passionate about<br />crafting the<br /><span className="accent-text">modern web.</span></h1>
               <div className="space-y-5 text-[var(--text-2)] leading-relaxed text-base max-w-2xl">
-                <p>Hello! I'm <span className="text-[var(--text)] font-semibold">Hamid Ali Baloch</span>, a dedicated web developer from Balochistan, Pakistan. I specialize in building responsive, performant, and beautifully designed websites using React, JavaScript, Node.js, and MongoDB.</p>
+                <p>Hello! I'm <span className="text-[var(--text)] font-semibold">Hamid Ali Baloch</span>, a dedicated full stack developer from Balochistan, Pakistan. I specialize in building responsive, performant, and beautifully designed web applications using React, JavaScript, Node.js, and MongoDB.</p>
                 <p>My journey started with a simple curiosity: how do websites work? That question turned into a deep passion. I've spent countless hours mastering fundamentals, building projects, and refining my craft.</p>
                 <p>Beyond code, I care deeply about user experience, accessibility, performance, and writing code that other humans can read and maintain. Every project is an opportunity to learn something new and push my limits.</p>
               </div>

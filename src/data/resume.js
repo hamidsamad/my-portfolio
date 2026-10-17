@@ -1,7 +1,7 @@
 export const experiences = [
   {
     period: '2026 – Present', badge: 'Current',
-    title: 'Frontend Developer', company: 'Freelance',
+    title: 'Full Stack Developer', company: 'Freelance',
     items: ['Designing and developing responsive React websites and web applications for clients.', 'Building full-stack features with Node.js, Express, and MongoDB.', 'Optimizing website performance, accessibility, and Core Web Vitals.', 'Managing projects from discovery through to deployment.']
   },
   {

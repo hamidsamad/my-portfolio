@@ -123,7 +123,7 @@ const Home = () => {
             <div className="hero-eyebrow flex items-center gap-3 mb-8">
               <span className="w-2.5 h-2.5 rounded-full bg-[var(--accent)] animate-pulse shadow-[0_0_12px_var(--accent)]" />
               <span className="text-xs uppercase tracking-[.3em] text-[var(--accent)] font-semibold">
-                Frontend Developer & Digital Craftsman
+                Full Stack Developer
               </span>
             </div>
 
@@ -188,8 +188,8 @@ const Home = () => {
             </h2>
 
             <p className="mt-8 text-lg text-[var(--text-2)] leading-relaxed">
-              I'm a frontend developer who enjoys turning ideas into polished,
-              interactive digital experiences. I care about performance,
+              I'm a full stack developer who enjoys turning ideas into polished,
+              end-to-end digital experiences. I care about performance,
               accessibility, design, and the small details that make a website
               memorable.
             </p>
