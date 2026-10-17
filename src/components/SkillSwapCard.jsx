@@ -26,7 +26,7 @@ function SkillSwapCard() {
   return (
     <article
       aria-label="SkillSwap PK Project Showcase"
-      className="group relative rounded-3xl border border-emerald-500/25 bg-gradient-to-b from-white/[0.045] to-white/[0.015] p-6 sm:p-8 lg:p-10 backdrop-blur-md shadow-2xl shadow-emerald-950/20 overflow-hidden mb-16 transition-all duration-300 hover:border-emerald-500/40"
+      className="group relative rounded-3xl border border-emerald-500/25 bg-[var(--surface)] p-6 sm:p-8 lg:p-10 backdrop-blur-md shadow-2xl shadow-emerald-950/20 overflow-hidden mb-16 transition-all duration-300 hover:border-emerald-500/40"
     >
       {/* Decorative ambient gradient backdrop */}
       <div
@@ -45,7 +45,7 @@ function SkillSwapCard() {
             href={projectUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="block relative overflow-hidden rounded-2xl border border-white/10 bg-black/50 shadow-lg group/img"
+            className="block relative overflow-hidden rounded-2xl border border-[var(--border)] bg-black/50 shadow-lg group/img"
             data-cursor
             title="Open SkillSwap PK live application"
           >
@@ -76,16 +76,16 @@ function SkillSwapCard() {
                 <LuSparkles size={13} className="text-emerald-400 animate-pulse" />
                 Featured Platform
               </span>
-              <span className="text-xs text-white/40 font-mono">2026</span>
+              <span className="text-xs text-[var(--text-3)] font-mono">2026</span>
             </div>
 
             {/* Project Title */}
-            <h3 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-white mb-5">
+            <h3 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-[var(--text)] mb-5">
               SkillSwap <span className="text-emerald-400">PK</span>
             </h3>
 
             {/* Project Description (Exactly 6 Lines) */}
-            <div className="space-y-2.5 text-xs sm:text-sm lg:text-[13.5px] xl:text-sm text-white/70 leading-relaxed mb-6 font-normal">
+            <div className="space-y-2.5 text-xs sm:text-sm lg:text-[13.5px] xl:text-sm text-[var(--text-2)] leading-relaxed mb-6 font-normal">
               {descriptionLines.map((line, idx) => (
                 <p key={idx} className="flex items-start gap-2">
                   <span className="inline-block w-1.5 h-1.5 rounded-full bg-emerald-400/80 mt-1.5 shrink-0" />
@@ -96,14 +96,14 @@ function SkillSwapCard() {
 
             {/* Technology Badges */}
             <div className="mb-8">
-              <h4 className="text-[11px] font-semibold uppercase tracking-wider text-white/40 mb-3">
+              <h4 className="text-[11px] font-semibold uppercase tracking-wider text-[var(--text-3)] mb-3">
                 Technologies Used
               </h4>
               <div className="flex flex-wrap gap-2">
                 {technologies.map((tech) => (
                   <span
                     key={tech}
-                    className="px-3 py-1 text-xs rounded-full border border-white/10 bg-white/[0.04] text-white/80 font-medium hover:border-emerald-400/40 hover:text-emerald-300 transition-colors"
+                    className="px-3 py-1 text-xs rounded-full border border-[var(--border)] bg-[var(--surface-solid)] text-[var(--text-2)] font-medium hover:border-emerald-400/40 hover:text-emerald-400 transition-colors"
                   >
                     {tech}
                   </span>
@@ -118,7 +118,7 @@ function SkillSwapCard() {
               href={projectUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="w-full sm:w-auto flex-1 inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full bg-emerald-400 text-black font-bold text-xs sm:text-sm hover:bg-white transition-all shadow-lg shadow-emerald-500/20 active:scale-95"
+              className="w-full sm:w-auto flex-1 inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full bg-emerald-400 text-black font-bold text-xs sm:text-sm hover:bg-emerald-300 transition-all shadow-lg shadow-emerald-500/20 active:scale-95"
               data-cursor
             >
               <span>Live Demo</span>
@@ -129,7 +129,7 @@ function SkillSwapCard() {
               href={projectUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="w-full sm:w-auto flex-1 inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full border border-white/15 bg-white/[0.03] hover:bg-white/[0.08] text-white font-semibold text-xs sm:text-sm transition-all active:scale-95"
+              className="w-full sm:w-auto flex-1 inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full border border-[var(--border-strong)] bg-[var(--surface)] hover:bg-[var(--accent-soft)] hover:border-[var(--accent)] text-[var(--text)] font-semibold text-xs sm:text-sm transition-all active:scale-95"
               data-cursor
             >
               <span>View Project</span>

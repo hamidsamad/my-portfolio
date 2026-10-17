@@ -130,10 +130,10 @@ const Home = () => {
             <h1 className="hero-title text-[clamp(3.5rem,10vw,9rem)] leading-[.85] tracking-[-.06em] font-bold">
               Hamid Ali
               <br />
-              <span className="text-white/30">Baloch.</span>
+              <span className="text-[var(--text-3)]">Baloch.</span>
             </h1>
 
-            <p className="hero-description mt-10 max-w-2xl text-lg md:text-xl text-white/60 leading-relaxed">
+            <p className="hero-description mt-10 max-w-2xl text-lg md:text-xl text-[var(--text-2)] leading-relaxed">
               I build modern digital experiences that combine clean design,
               thoughtful interactions, and powerful technology.
             </p>
@@ -141,28 +141,28 @@ const Home = () => {
             <div className="hero-actions flex flex-wrap gap-4 mt-10">
               <Link
                 to="/work"
-                className="inline-flex items-center gap-3 px-6 py-4 rounded-full bg-white text-black hover:bg-emerald-400 transition"
+                className="inline-flex items-center gap-3 px-6 py-4 rounded-full bg-[var(--text)] text-[var(--bg)] hover:bg-[var(--accent)] hover:text-white transition font-medium"
               >
                 View My Work <LuArrowUpRight />
               </Link>
 
               <Link
                 to="/contact"
-                className="inline-flex items-center gap-3 px-6 py-4 rounded-full border border-white/15 hover:bg-white/5 transition"
+                className="inline-flex items-center gap-3 px-6 py-4 rounded-full border border-[var(--border-strong)] text-[var(--text)] hover:border-[var(--accent)] hover:text-[var(--accent)] transition font-medium"
               >
                 Let's Talk <LuMail />
               </Link>
             </div>
 
-            <div className="flex items-center gap-2 mt-14 text-white/40">
+            <div className="flex items-center gap-2 mt-14 text-[var(--text-3)]">
               <LuMapPin />
               Quetta, Pakistan
-              <span className="w-1 h-1 rounded-full bg-white/20 mx-2" />
+              <span className="w-1 h-1 rounded-full bg-[var(--border-strong)] mx-2" />
               Available for work
             </div>
           </div>
 
-          <div className="absolute bottom-10 right-8 hidden md:flex flex-col items-center gap-3 text-white/30">
+          <div className="absolute bottom-10 right-8 hidden md:flex flex-col items-center gap-3 text-[var(--text-3)]">
             <span className="text-xs uppercase [writing-mode:vertical-rl]">
               Scroll to explore
             </span>
@@ -182,10 +182,10 @@ const Home = () => {
           <div>
             <h2 className="text-4xl md:text-6xl lg:text-7xl leading-[.95]">
               Crafting web experiences
-              <span className="text-white/30"> that actually feel good.</span>
+              <span className="text-[var(--text-3)]"> that actually feel good.</span>
             </h2>
 
-            <p className="mt-8 text-lg text-white/50 leading-relaxed">
+            <p className="mt-8 text-lg text-[var(--text-2)] leading-relaxed">
               I'm a frontend developer who enjoys turning ideas into polished,
               interactive digital experiences. I care about performance,
               accessibility, design, and the small details that make a website
@@ -196,11 +196,11 @@ const Home = () => {
               More about me
             </ArrowLink>
 
-            <div className="grid grid-cols-3 gap-6 mt-16 pt-8 border-t border-white/10">
+            <div className="grid grid-cols-3 gap-6 mt-16 pt-8 border-t border-[var(--border)]">
               {stats.map(([number, label]) => (
                 <div key={label}>
                   <b className="text-3xl md:text-4xl">{number}</b>
-                  <p className="text-sm text-white/40 mt-2">{label}</p>
+                  <p className="text-sm text-[var(--text-3)] mt-2">{label}</p>
                 </div>
               ))}
             </div>
@@ -208,7 +208,7 @@ const Home = () => {
         </div>
       </section>
 
-      <section className="py-28 md:py-40 px-6 bg-white/[.02]">
+      <section className="py-28 md:py-40 px-6 bg-[var(--bg-2)]">
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-col md:flex-row justify-between gap-6 mb-16">
             <div>
@@ -220,7 +220,7 @@ const Home = () => {
               </h2>
             </div>
 
-            <p className="text-white/40 max-w-md">
+            <p className="text-[var(--text-2)] max-w-md">
               I build digital products that are useful, fast, responsive, and
               visually engaging.
             </p>
@@ -234,10 +234,10 @@ const Home = () => {
                 <Link
                   to="/services"
                   key={service.num || i}
-                  className="group p-7 md:p-8 rounded-2xl border border-white/10 bg-white/[.025] hover:bg-white/[.05] transition"
+                  className="group p-7 md:p-8 rounded-2xl border border-[var(--border)] bg-[var(--surface)] hover:border-[var(--accent)] hover:bg-[var(--surface-solid)] transition"
                 >
                   <div className="flex justify-between">
-                    <span className="text-xs text-white/25">
+                    <span className="text-xs text-[var(--text-3)]">
                       {service.num || `0${i + 1}`}
                     </span>
 
@@ -252,7 +252,7 @@ const Home = () => {
                     {service.title}
                   </h3>
 
-                  <p className="mt-4 text-white/40 leading-relaxed">
+                  <p className="mt-4 text-[var(--text-2)] leading-relaxed">
                     {service.description}
                   </p>
                 </Link>
@@ -274,7 +274,7 @@ const Home = () => {
               </h2>
             </div>
 
-            <ArrowLink to="/work" className="hidden md:flex text-white/50">
+            <ArrowLink to="/work" className="hidden md:flex text-[var(--text-2)]">
               View all projects
             </ArrowLink>
           </div>
@@ -291,7 +291,7 @@ const Home = () => {
                 key={project.id || i}
                 className="group"
               >
-                <div className="relative aspect-[16/10] overflow-hidden rounded-2xl border border-white/10">
+                <div className="relative aspect-[16/10] overflow-hidden rounded-2xl border border-[var(--border)]">
                   <img
                     src={project.img}
                     alt={project.title}
@@ -306,7 +306,7 @@ const Home = () => {
                 </div>
 
                 <div className="mt-6">
-                  <p className="text-xs text-white/40 uppercase">
+                  <p className="text-xs text-[var(--text-3)] uppercase">
                     {project.cat} • {project.year}
                   </p>
 
@@ -315,14 +315,14 @@ const Home = () => {
                   </h3>
 
                   {project.desc && (
-                    <p className="text-white/40 mt-3">{project.desc}</p>
+                    <p className="text-[var(--text-2)] mt-3">{project.desc}</p>
                   )}
 
                   <div className="flex flex-wrap gap-2 mt-4">
                     {project.tags?.slice(0, 3).map((tag) => (
                       <span
                         key={tag}
-                        className="px-3 py-1.5 text-xs rounded-full border border-white/10 text-white/40"
+                        className="px-3 py-1.5 text-xs rounded-full border border-[var(--border)] text-[var(--text-3)]"
                       >
                         {tag}
                       </span>
@@ -337,7 +337,7 @@ const Home = () => {
 
       <section className="py-28 md:py-40 px-6">
         <div className="max-w-7xl mx-auto">
-          <div className="rounded-3xl border border-white/10 bg-white/[.025] p-8 md:p-16 lg:p-20">
+          <div className="rounded-3xl border border-[var(--border)] bg-[var(--surface)] p-8 md:p-16 lg:p-20">
             <div className="flex items-center gap-2 text-emerald-400 mb-8">
               <LuStar fill="currentColor" />
               Have a project in mind?
@@ -345,17 +345,17 @@ const Home = () => {
 
             <h2 className="text-4xl md:text-6xl lg:text-8xl font-semibold tracking-[-.05em]">
               Let's build something
-              <span className="text-white/30"> great together.</span>
+              <span className="text-[var(--text-3)]"> great together.</span>
             </h2>
 
-            <p className="text-lg text-white/50 max-w-xl mt-8">
+            <p className="text-lg text-[var(--text-2)] max-w-xl mt-8">
               Have an idea, project, or opportunity? I'd love to hear about it
               and see how we can turn it into something meaningful.
             </p>
 
             <Link
               to="/contact"
-              className="inline-flex items-center gap-3 mt-10 px-7 py-4 rounded-full bg-emerald-400 text-black hover:bg-white transition"
+              className="inline-flex items-center gap-3 mt-10 px-7 py-4 rounded-full bg-[var(--accent)] text-white hover:bg-[var(--text)] hover:text-[var(--bg)] transition font-medium"
             >
               Start a conversation <LuArrowUpRight />
             </Link>
