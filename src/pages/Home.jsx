@@ -66,7 +66,8 @@ const Home = () => {
         .from(".hero-eyebrow", { y: 30, opacity: 0, duration: .7 })
         .from(".hero-title", { y: 60, opacity: 0, duration: .9 }, "-=.4")
         .from(".hero-description", { y: 25, opacity: 0, duration: .6 }, "-=.4")
-        .from(".hero-actions", { y: 20, opacity: 0, duration: .5 }, "-=.3");
+        .from(".hero-actions", { y: 20, opacity: 0, duration: .5 }, "-=.3")
+        .from(".hero-portrait", { y: 40, opacity: 0, duration: .8, ease: "power2.out" }, "-=.5");
 
       [".blob-1", ".blob-2", ".blob-3"].forEach((el, i) =>
         gsap.to(el, {
@@ -119,47 +120,89 @@ const Home = () => {
         <div className="blob-3 absolute w-96 h-96 rounded-full bg-[var(--accent-2)]/12 blur-[100px] bottom-0 left-1/3 pointer-events-none" />
 
         <div className="hero-content relative z-10 max-w-7xl mx-auto px-6 w-full pt-28 pb-20">
-          <div className="max-w-5xl">
-            <div className="hero-eyebrow flex items-center gap-3 mb-8">
-              <span className="w-2.5 h-2.5 rounded-full bg-[var(--accent)] animate-pulse shadow-[0_0_12px_var(--accent)] shrink-0" />
-              <span className="text-xs uppercase tracking-[.25em] text-[var(--accent)] font-semibold">
-                Full Stack Developer (Frontend &amp; Backend)
-              </span>
+          <div className="grid lg:grid-cols-12 gap-12 lg:gap-10 items-center">
+            <div className="lg:col-span-7">
+              <div className="hero-eyebrow flex items-center gap-3 mb-8">
+                <span className="w-2.5 h-2.5 rounded-full bg-[var(--accent)] animate-pulse shadow-[0_0_12px_var(--accent)] shrink-0" />
+                <span className="text-xs uppercase tracking-[.25em] text-[var(--accent)] font-semibold">
+                  Full Stack Developer (Frontend &amp; Backend)
+                </span>
+              </div>
+
+              <h1 className="hero-title text-[clamp(3.2rem,7.5vw,7rem)] leading-[.94] tracking-[-.03em] font-bold font-serif">
+                Hamid Ali
+                <br />
+                <span className="accent-text italic">Baloch.</span>
+              </h1>
+
+              <p className="hero-description mt-8 max-w-2xl text-base md:text-lg text-[var(--text-2)] leading-relaxed">
+                I believe great digital experiences begin with thoughtful ideas, purposeful design, and attention to every detail. I combine creativity and technology to build intuitive interfaces, meaningful interactions, and powerful web solutions that balance simplicity with functionality, delivering digital experiences that feel effortless, perform beautifully, and stand out for all the right reasons.
+              </p>
+
+              <div className="hero-actions flex flex-wrap gap-4 mt-10">
+                <Link
+                  to="/work"
+                  className="btn-accent inline-flex items-center gap-3 px-8 py-4 rounded-full font-semibold shadow-xl transition"
+                  data-cursor
+                >
+                  View My Work <LuArrowUpRight />
+                </Link>
+
+                <Link
+                  to="/contact"
+                  className="btn-ghost inline-flex items-center gap-3 px-8 py-4 rounded-full font-semibold transition"
+                  data-cursor
+                >
+                  Let's Talk <LuMail />
+                </Link>
+              </div>
+
+              <div className="flex items-center gap-2 mt-12 text-[var(--text-3)] text-sm">
+                <LuMapPin className="text-[var(--accent)]" />
+                Quetta, Pakistan
+                <span className="w-1 h-1 rounded-full bg-[var(--border-strong)] mx-2" />
+                <span className="text-emerald-400 font-medium flex items-center gap-1.5">
+                  <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
+                  Available for work
+                </span>
+              </div>
             </div>
 
-            <h1 className="hero-title text-[clamp(3.5rem,10vw,9rem)] leading-[.90] tracking-[-.03em] font-bold font-serif">
-              Hamid Ali
-              <br />
-              <span className="accent-text italic">Baloch.</span>
-            </h1>
+            <div className="lg:col-span-5 flex justify-center lg:justify-end">
+              <div className="hero-portrait relative group w-full max-w-[340px] sm:max-w-[380px] lg:max-w-[400px]">
+                {/* Ambient glow behind portrait */}
+                <div className="absolute -inset-4 bg-gradient-to-tr from-[var(--emerald)]/35 via-[var(--accent)]/25 to-transparent rounded-[2.5rem] blur-2xl opacity-75 group-hover:opacity-100 transition duration-700 pointer-events-none" />
 
-            <p className="hero-description mt-10 max-w-3xl text-lg md:text-xl text-[var(--text-2)] leading-relaxed">
-              I believe great digital experiences begin with thoughtful ideas, purposeful design, and attention to every detail. I combine creativity and technology to build intuitive interfaces, meaningful interactions, and powerful web solutions that balance simplicity with functionality, delivering digital experiences that feel effortless, perform beautifully, and stand out for all the right reasons.
-            </p>
+                {/* Luxury Portrait Frame */}
+                <div className="relative aspect-[4/5] rounded-[2.2rem] overflow-hidden border border-[var(--border-strong)] bg-[var(--surface)] shadow-[0_25px_60px_-15px_rgba(0,0,0,0.6)] backdrop-blur-md transition duration-700 group-hover:scale-[1.02] group-hover:border-[var(--accent)]">
+                  <img
+                    src="/hamid-ali-baloch.jpeg"
+                    alt="Hamid Ali Baloch - Full Stack Developer"
+                    className="w-full h-full object-cover object-top transition duration-700 ease-out group-hover:scale-105"
+                    onError={(e) => {
+                      e.currentTarget.src = '/hamid-ali-baloch.jpg';
+                    }}
+                  />
 
-            <div className="hero-actions flex flex-wrap gap-4 mt-10">
-              <Link
-                to="/work"
-                className="btn-accent inline-flex items-center gap-3 px-8 py-4 rounded-full font-semibold shadow-xl transition"
-                data-cursor
-              >
-                View My Work <LuArrowUpRight />
-              </Link>
+                  {/* Subtle dark gradient scrim at bottom */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent pointer-events-none z-[1]" />
 
-              <Link
-                to="/contact"
-                className="btn-ghost inline-flex items-center gap-3 px-8 py-4 rounded-full font-semibold transition"
-                data-cursor
-              >
-                Let's Talk <LuMail />
-              </Link>
-            </div>
-
-            <div className="flex items-center gap-2 mt-14 text-[var(--text-3)]">
-              <LuMapPin />
-              Quetta, Pakistan
-              <span className="w-1 h-1 rounded-full bg-[var(--border-strong)] mx-2" />
-              Available for work
+                  {/* Floating info badge over photo */}
+                  <div className="absolute bottom-5 left-5 right-5 z-10 p-4 rounded-2xl bg-[var(--surface-solid)]/90 backdrop-blur-md border border-[var(--border)] shadow-xl flex items-center justify-between">
+                    <div>
+                      <div className="flex items-center gap-1.5">
+                        <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse shadow-[0_0_8px_#34d399]" />
+                        <span className="text-[10px] uppercase tracking-widest text-[var(--accent)] font-semibold">Available for Work</span>
+                      </div>
+                      <p className="text-base font-bold font-serif text-[var(--text)] mt-1">Hamid Ali Baloch</p>
+                      <p className="text-xs text-[var(--text-3)]">Full Stack Developer</p>
+                    </div>
+                    <div className="w-10 h-10 rounded-xl bg-[var(--accent-soft)] border border-[var(--accent)]/40 flex items-center justify-center text-[var(--accent)] shrink-0 shadow-sm">
+                      <img src="/logo.jpg" alt="Logo" className="w-7 h-7 rounded-full object-cover" />
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
 
