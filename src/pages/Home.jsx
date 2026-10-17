@@ -177,24 +177,24 @@ const Home = () => {
       <section className="py-28 md:py-40 px-6">
         <div className="max-w-7xl mx-auto grid lg:grid-cols-[.8fr_1.2fr] gap-12 lg:gap-24">
           <span className="text-xs uppercase tracking-[.3em] text-[var(--accent)] font-semibold">
-            01 / About
+            STRUCTURE &amp; EXPERIENCE / 16
           </span>
 
           <div>
-            <h2 className="text-4xl md:text-6xl lg:text-7xl leading-[1.02] font-serif">
-              Crafting web experiences
-              <span className="accent-text italic"> that actually feel good.</span>
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl leading-[1.1] font-serif">
+              Designing what people see{" "}
+              <span className="accent-text italic">
+                and engineering what they don't,
+              </span>{" "}
+              with equal attention to every layer of the experience.
             </h2>
 
             <p className="mt-8 text-lg text-[var(--text-2)] leading-relaxed">
-              I'm a full stack developer who enjoys turning ideas into polished,
-              end-to-end digital experiences. I care about performance,
-              accessibility, design, and the small details that make a website
-              memorable.
+              From accessible components and responsive layouts to secure APIs and thoughtful data models, I build applications with a balance of visual quality, technical structure, and long-term maintainability.
             </p>
 
             <ArrowLink to="/about" className="mt-8">
-              More about me
+              See the work behind the work
             </ArrowLink>
 
             <div className="grid grid-cols-3 gap-6 mt-16 pt-8 border-t border-[var(--border)]">
@@ -227,7 +227,7 @@ const Home = () => {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
             {services.map((service, i) => {
               const Icon = service.icon;
 
@@ -235,7 +235,7 @@ const Home = () => {
                 <Link
                   to="/services"
                   key={service.num || i}
-                  className="group p-7 md:p-8 rounded-2xl border border-[var(--border)] bg-[var(--surface)] hover:border-[var(--accent)] hover:shadow-xl hover:shadow-[var(--accent-glow)] transition"
+                  className="group p-6 lg:p-7 rounded-2xl border border-[var(--border)] bg-[var(--surface)] hover:border-[var(--accent)] hover:shadow-xl hover:shadow-[var(--accent-glow)] transition flex flex-col justify-between"
                 >
                   <div className="flex justify-between">
                     <span className="text-xs text-[var(--text-3)]">

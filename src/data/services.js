@@ -1,6 +1,7 @@
 import {
   LuLayoutGrid,
   LuCode,
+  LuServer,
   LuPenTool,
 } from "react-icons/lu";
 
@@ -27,6 +28,16 @@ const services = [
   },
   {
     num: "03",
+    icon: LuServer,
+    iconBg: "bg-teal-500/10",
+    iconBorder: "border-teal-500/20",
+    iconColor: "text-teal-400",
+    title: "Backend Development",
+    description:
+      "Engineering robust RESTful APIs, server architecture, and database integrations using Node.js, Express.js, and MongoDB.",
+  },
+  {
+    num: "04",
     icon: LuPenTool,
     iconBg: "bg-amber-500/10",
     iconBorder: "border-amber-500/20",
