@@ -36,7 +36,16 @@ function Resume() {
             <span className="eyebrow">Resume</span>
             <h1 className="h-xl mt-6">Experience &<br /><span className="accent-text">Education.</span></h1>
           </div>
-          <a href="#" onClick={e=>e.preventDefault()} className="btn btn-accent self-start" data-cursor><LuDownload/> Download CV</a>
+          <a
+            href="/Hamid_Ali_Baloch_CV.pdf"
+            download="Hamid_Ali_Baloch_CV.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn btn-accent self-start inline-flex items-center gap-2 shadow-lg hover:shadow-[var(--accent-glow)] transition"
+            data-cursor
+          >
+            <LuDownload size={18} /> Download CV
+          </a>
         </div>
         <div className="grid lg:grid-cols-2 gap-16">
           <div>
